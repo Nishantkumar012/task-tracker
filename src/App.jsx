@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import { Routes, Route, HashRouter} from 'react-router-dom'
 import Login from './components/Login'
 import Dashboard from './components/Dashboard'
 import TaskForm from './components/TaskForm'
@@ -16,7 +16,7 @@ function App() {
 
   return (
     
-       <BrowserRouter>
+       <HashRouter>
           <Routes>
              <Route path='/' element={<Login/>} />
              <Route path='/dashboard' element={<Dashboard/>} />
@@ -24,7 +24,7 @@ function App() {
               <Route path='/list' element={<TaskList />} />
               <Route path='/item' element={<TaskItem/>}/>
           </Routes>         
-       </BrowserRouter>
+       </HashRouter>
     
     
     
